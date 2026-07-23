@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Portal — Scaleprove</title>
+<meta name="description" content="Your Scaleprove client portal — access Listing Pulse and Brand Pulse.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'%3E%3Crect width='52' height='52' rx='11' fill='%23001F3F'/%3E%3Crect x='8' y='29' width='8' height='15' rx='2.4' fill='%23B9812E'/%3E%3Crect x='22' y='19' width='8' height='25' rx='2.4' fill='%23B9812E'/%3E%3Crect x='36' y='8' width='8' height='36' rx='2.4' fill='%23B9812E'/%3E%3Cpath d='M9 27 C18 6 33 4 42 8' fill='none' stroke='%23E8C787' stroke-width='2' stroke-dasharray='1 5.5' stroke-linecap='round'/%3E%3Ccircle cx='42.5' cy='8.5' r='2.8' fill='%23E8C787'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="navbar">
+    <a href="index.html" class="logo" aria-label="Scaleprove — home">
+      <svg class="mark" width="44" height="44" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+        <rect x="8" y="29" width="8" height="15" rx="2.4" fill="#B9812E"/>
+        <rect x="22" y="19" width="8" height="25" rx="2.4" fill="#B9812E"/>
+        <rect x="36" y="8" width="8" height="36" rx="2.4" fill="#B9812E"/>
+        <path class="mark-orbit" d="M9 27 C18 6 33 4 42 8" fill="none" stroke="#E8C787" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="42.5" cy="8.5" r="2.8" fill="#E8C787"/>
+      </svg>
+      <span class="wordwrap">
+        <span class="word">Scaleprove</span>
+        <span class="route">IN → WW</span>
+      </span>
+    </a>
+    <nav class="links" id="navLinks">
+      <div class="nav-item">
+        <button class="nav-top" type="button">Services <svg class="caret" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="dropdown">
+          <a href="launch.html">Launch Package<span class="sub">For first-time Amazon launches</span></a>
+          <a href="growth.html">Growth Retainer<span class="sub">For sellers already live, scaling</span></a>
+          <a href="pricing.html">Compare pricing<span class="sub">Both tiers, side by side</span></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-top" type="button">Why Scaleprove <svg class="caret" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="dropdown">
+          <a href="why-us.html">DIY vs. Agency vs. Us<span class="sub">The honest comparison</span></a>
+          <a href="why-us.html#mistakes">6 recurring mistakes<span class="sub">Learn from others' launches</span></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-top" type="button">Company <svg class="caret" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="dropdown">
+          <a href="team.html">Our team<span class="sub">Founders &amp; operator background</span></a>
+          <a href="team.html#brands">Brands we've helped<span class="sub">Case studies from the team</span></a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="contact.html">Contact</a></div>
+    </nav>
+    <div class="nav-cta">
+      <button class="btn btn-ghost" id="portalLogout" type="button">Log out</button>
+      <button class="burger" id="burgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="pagehead" id="portalView">
+  <div class="wrap">
+    <div class="crumb">Client portal</div>
+    <h1 id="portalGreeting">Welcome back 👋</h1>
+    <p>Here are your tools. Each one opens in this same tab — use your browser's back button to return to your portal.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="portal-tools">
+      <a class="tool-card" href="https://claude.ai/public/artifacts/c5c8617b-eac6-41c4-b209-e9bbc1aa731a">
+        <div class="tool-icon">📋</div>
+        <h3>Listing Pulse</h3>
+        <p>Check the health of your Amazon listings — titles, images, keywords and A+ content — and see exactly what to fix first.</p>
+        <span class="open-tool">Open Listing Pulse <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a class="tool-card" href="https://claude.ai/public/artifacts/16e7994b-f062-41a3-a7bd-d15c10efba94">
+        <div class="tool-icon">🩺</div>
+        <h3>Brand Pulse</h3>
+        <p>A quick read on your overall brand and account health — ratings, reviews and the signals that matter most.</p>
+        <span class="open-tool">Open Brand Pulse <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+    </div>
+    <p class="portal-note">More tools will appear here as they're added — you won't need to do anything to get access.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h5 class="mono">Scaleprove</h5>
+        <p style="font-size:14px;line-height:1.6;max-width:280px;color:#B9C6D2;">The operator-led advisory for Indian brands launching and scaling on Amazon worldwide.</p>
+      </div>
+      <div>
+        <h5 class="mono">Services</h5>
+        <a href="launch.html">Launch Package</a>
+        <a href="growth.html">Growth Retainer</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div>
+        <h5 class="mono">Company</h5>
+        <a href="team.html">Our team</a>
+        <a href="team.html#brands">Brands we've helped</a>
+        <a href="why-us.html">Why Scaleprove</a>
+      </div>
+      <div>
+        <h5 class="mono">Get started</h5>
+        <a href="mailto:hello@scaleprove.com">hello@scaleprove.com</a>
+        <a href="contact.html">Book a call</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Scaleprove. All rights reserved.</span>
+      <span>Built by operators. Not just advisors.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/clients.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>
