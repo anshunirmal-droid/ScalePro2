@@ -136,6 +136,46 @@ if(modal){
   }
 }
 
+// Contact form (Web3Forms) — contact.html only
+const contactForm = document.getElementById('contactForm');
+if(contactForm){
+  const formStatus = document.getElementById('formStatus');
+  const submitBtn = contactForm.querySelector('button[type="submit"]');
+  const submitLabel = submitBtn.textContent;
+
+  function showFormStatus(message, kind){
+    formStatus.textContent = message;
+    formStatus.className = 'form-status ' + kind;
+    formStatus.style.display = 'block';
+  }
+
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    fetch(contactForm.action, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(contactForm)
+    })
+    .then(res => res.json())
+    .then(data => {
+      if(!data.success) throw new Error(data.message || 'Submission failed');
+      contactForm.reset();
+      Array.from(contactForm.elements).forEach(el => { if(el.type !== 'hidden' && el.type !== 'checkbox') el.style.display = 'none'; });
+      contactForm.querySelectorAll('.field').forEach(f => f.style.display = 'none');
+      submitBtn.style.display = 'none';
+      showFormStatus("Thanks — we've got it. We'll reply within one business day to schedule your call.", 'success');
+    })
+    .catch(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = submitLabel;
+      showFormStatus('Something went wrong sending your message. Please email us directly at hello@scaleprove.com.', 'error');
+    });
+  });
+}
+
 // Portal page (portal.html only — guarded so this file can stay shared)
 const portalRoot = document.getElementById('portalView');
 if(portalRoot){
