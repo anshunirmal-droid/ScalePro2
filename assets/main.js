@@ -149,6 +149,19 @@ if(contactForm){
     formStatus.style.display = 'block';
   }
 
+  function hideFormFields(){
+    Array.from(contactForm.elements).forEach(el => { if(el.type !== 'hidden' && el.type !== 'checkbox') el.style.display = 'none'; });
+    contactForm.querySelectorAll('.field').forEach(f => f.style.display = 'none');
+    submitBtn.style.display = 'none';
+  }
+
+  // Fallback path: JS didn't intercept the submit (e.g. stale cache), so the
+  // browser natively posted to Web3Forms, which redirected back here with ?sent=true
+  if(new URLSearchParams(window.location.search).get('sent') === 'true'){
+    hideFormFields();
+    showFormStatus("Thanks — we've got it. We'll reply within one business day to schedule your call.", 'success');
+  }
+
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     submitBtn.disabled = true;
@@ -163,9 +176,7 @@ if(contactForm){
     .then(data => {
       if(!data.success) throw new Error(data.message || 'Submission failed');
       contactForm.reset();
-      Array.from(contactForm.elements).forEach(el => { if(el.type !== 'hidden' && el.type !== 'checkbox') el.style.display = 'none'; });
-      contactForm.querySelectorAll('.field').forEach(f => f.style.display = 'none');
-      submitBtn.style.display = 'none';
+      hideFormFields();
       showFormStatus("Thanks — we've got it. We'll reply within one business day to schedule your call.", 'success');
     })
     .catch(() => {
