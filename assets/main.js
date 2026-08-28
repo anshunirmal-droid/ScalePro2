@@ -52,8 +52,8 @@ document.querySelectorAll('.tabbar').forEach(bar => {
 // ---------------------------------------------------------------------------
 // Client session helpers (shared by the login modal and the portal page)
 // ---------------------------------------------------------------------------
-const SESSION_KEY = 'scaleprove_session';       // this browser tab only
-const REMEMBER_KEY = 'scaleprove_remembered';   // persists across tabs/visits
+const SESSION_KEY = 'scalepro_session';       // this browser tab only
+const REMEMBER_KEY = 'scalepro_remembered';   // persists across tabs/visits
 
 function findAccount(email, password){
   const list = (typeof CLIENT_ACCOUNTS !== 'undefined') ? CLIENT_ACCOUNTS : [];
@@ -182,7 +182,7 @@ if(contactForm){
     .catch(() => {
       submitBtn.disabled = false;
       submitBtn.textContent = submitLabel;
-      showFormStatus('Something went wrong sending your message. Please email us directly at hello@scaleprove.com.', 'error');
+      showFormStatus('Something went wrong sending your message. Please email us directly at hello@scaleproadvisory.com.', 'error');
     });
   });
 }

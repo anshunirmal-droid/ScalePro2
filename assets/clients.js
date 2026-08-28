@@ -1,6 +1,6 @@
 /*
   ============================================================================
-  SCALEPROVE — CLIENT ACCOUNTS (front-end login gate)
+  SCALEPRO — CLIENT ACCOUNTS (front-end login gate)
   ============================================================================
 
   HOW THIS WORKS
@@ -48,6 +48,6 @@
 */
 
 const CLIENT_ACCOUNTS = [
-  { email: "demo@scaleprove.com",        password: "Scaleprove-Demo-1",  name: "Demo Client" },
+  { email: "demo@scaleproadvisory.com",        password: "ScalePro-Demo-1",  name: "Demo Client" },
   { email: "founder@sandhusherbal.com",  password: "Sandhu-Pulse-2026",  name: "Sandhu's Herbal" }
 ];
