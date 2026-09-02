@@ -77,13 +77,13 @@ header.solid{
 }
 .navbar{
   display:flex;align-items:center;justify-content:space-between;
-  padding:14px 28px;max-width:var(--maxw);margin:0 auto;
+  padding:18px 28px;max-width:var(--maxw);margin:0 auto;
   position:relative;
 }
 .logo{
   display:flex;align-items:center;color:#fff;text-decoration:none;
 }
-.logo-img{height:44px;width:auto;display:block;transition:transform .25s ease;}
+.logo-img{height:88px;width:auto;display:block;transition:transform .25s ease;}
 .logo:hover .logo-img{transform:translateY(-1px);}
 
 /* primary nav + dropdowns */
@@ -515,5 +515,5 @@ footer{background:var(--color-dark);color:var(--color-text-on-dark-secondary);pa
   .cta-band{padding:36px 26px;}
   .section{padding:60px 0;}
   .foot-grid{grid-template-columns:1fr 1fr;}
-  .logo-img{height:34px;}
+  .logo-img{height:68px;}
 }
