@@ -339,8 +339,8 @@ table.comp col.us-col{background:var(--color-accent-soft);}
 .founders{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .fcard{border:1px solid var(--color-border);border-radius:var(--radius);background:var(--color-surface);padding:28px;}
 .favatar{
-  width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;
-  font-family:'Fraunces',serif;font-weight:600;font-size:20px;color:#fff;margin-bottom:18px;
+  width:84px;height:84px;border-radius:50%;object-fit:cover;display:block;
+  border:1px solid var(--color-border);margin-bottom:18px;
 }
 .fcard h4{font-size:19px;margin:0 0 3px;}
 .fcard .role{font-size:13px;color:var(--color-text-primary);font-weight:600;margin-bottom:6px;}
