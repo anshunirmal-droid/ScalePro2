@@ -334,6 +334,32 @@ table.comp col.us-col{background:var(--color-accent-soft);}
 .brand ul{margin:0;padding:0;list-style:none;}
 .brand li{font-size:13px;color:var(--color-text-secondary);padding:6px 0;border-top:1px solid var(--color-border);}
 .brand li:first-child{border-top:none;}
+.brand-logo{height:42px;width:auto;max-width:170px;object-fit:contain;object-position:left center;display:block;margin-bottom:16px;}
+
+/* Motion variant: index.html's "Proof of the playbook" strip — an auto-scrolling
+   row of brand cards, distinct from the static .brands grid used on team.html#brands.
+   Content is duplicated once in the HTML so translateX(-50%) loops seamlessly. */
+.brands-marquee{
+  overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);
+}
+.brands-track{
+  display:flex;gap:22px;width:max-content;
+  animation:brandsScroll 38s linear infinite;
+}
+.brands-marquee:hover .brands-track{animation-play-state:paused;}
+.brands-track .brand{flex:0 0 320px;width:320px;}
+@keyframes brandsScroll{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+@media (prefers-reduced-motion: reduce){
+  .brands-track{animation:none;}
+}
+@media (max-width:640px){
+  .brands-track .brand{flex-basis:270px;width:270px;}
+}
 
 /* ---------- Founders ---------- */
 .founders{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
