@@ -1,11 +1,3 @@
-// Sticky header solid on scroll
-const header = document.getElementById('siteHeader');
-function updateHeaderSolid(){
-  if(header) header.classList.toggle('solid', window.scrollY > 30);
-}
-window.addEventListener('scroll', updateHeaderSolid);
-updateHeaderSolid();
-
 // Mobile nav open/close
 const burger = document.getElementById('burgerBtn');
 const navLinks = document.getElementById('navLinks');

@@ -66,14 +66,10 @@ section{position:relative;}
 /* ---------- Nav ---------- */
 header{
   position:sticky;top:0;z-index:200;
-  background:rgba(17,17,17,0.68);
-  backdrop-filter:blur(4px);
-  transition:background .3s ease, box-shadow .3s ease, backdrop-filter .3s ease;
-}
-header.solid{
   background:rgba(17,17,17,0.97);
   backdrop-filter:blur(6px);
   box-shadow:0 1px 0 rgba(255,255,255,0.06);
+  transition:background .3s ease, box-shadow .3s ease, backdrop-filter .3s ease;
 }
 .navbar{
   display:flex;align-items:center;justify-content:space-between;
